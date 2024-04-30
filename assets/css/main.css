@@ -1004,6 +1004,73 @@ section,
 
 /* About Section - Home Page
 ------------------------------*/
+ /* Custom CSS for About Us section */
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  padding: 80px 0;
+}
+
+.about .content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about .member-img img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Adjust the maximum height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about .icon-box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  height: 100%; /* Ensure each box occupies the same height */
+}
+
+.about .icon-box i {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.about .icon-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about .icon-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .about {
   --background-color: #f4f4f4;
 }
@@ -1343,6 +1410,56 @@ section,
 
 /* Portfolio Section - Home Page
 ------------------------------*/
+
+   /* Custom CSS styles for portfolio section */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio .member {
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio .member-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .member-info {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .member-info h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.portfolio .member-info span {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.portfolio .member-info p {
+    font-size: 14px;
+    color: #6c757d;
+}
+/* </style> */
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1687,6 +1804,21 @@ section,
 
 /* Team Section - Home Page
 ------------------------------*/
+/* Custom styles for the member sections */
+.member {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
 .team {
   --background-color: #f4f4f4;
 }
