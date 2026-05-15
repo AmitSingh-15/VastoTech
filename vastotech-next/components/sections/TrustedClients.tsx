@@ -23,7 +23,7 @@ export default function TrustedClients() {
             <ul className="animate-marquee flex items-center gap-12">
               {logos.map((logo, idx) => (
                 <li key={`${logo.name}-${idx}`} className="flex-shrink-0">
-                  <div className="relative h-12 w-32 opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0">
+                  <div className="relative h-14 w-32 opacity-80 transition-all duration-300 hover:opacity-100">
                     <Image
                       src={logo.src}
                       alt={logo.name}

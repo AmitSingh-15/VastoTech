@@ -43,7 +43,7 @@ export default function About() {
             </ul>
 
             <div className="mt-8">
-              <Button href="#contact" variant="primary">
+              <Button href="/#contact" variant="primary">
                 Know More About Us
               </Button>
             </div>
@@ -58,7 +58,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-card sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+                src="/images/projects/bg1.jpg"
                 alt="Modern corporate office building"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

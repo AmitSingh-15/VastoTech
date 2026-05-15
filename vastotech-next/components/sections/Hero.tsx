@@ -48,10 +48,10 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#solutions" variant="primary" size="lg">
+              <Button href="/#solutions" variant="primary" size="lg">
                 Our Solutions
               </Button>
-              <Button href="#contact" variant="secondary" size="lg">
+              <Button href="/#contact" variant="secondary" size="lg">
                 Get in Touch
               </Button>
             </div>
@@ -65,7 +65,7 @@ export default function Hero() {
           >
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2.5rem] rounded-bl-[5rem] shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=80"
+                src="/images/projects/bg2.jpg"
                 alt="Smart city skyline with IoT connectivity"
                 fill
                 priority

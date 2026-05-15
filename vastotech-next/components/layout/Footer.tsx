@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Linkedin, Twitter, Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Instagram, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Container from '@/components/ui/Container';
-import { FOOTER_COLUMNS } from '@/constants/data';
+import { FOOTER_COLUMNS, CONTACT, SITE } from '@/constants/data';
 
 const SOCIAL = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -12,16 +12,25 @@ const SOCIAL = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-navy-900 text-slate-300">
+    <footer className="bg-navy-900 text-slate-300">
       <Container className="py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="#hero" className="flex items-center gap-2" aria-label="Vastotech home">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-orange-400 text-white">
-                <span className="font-display text-base font-extrabold">V</span>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5"
+              aria-label="Vastotech home"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-lg bg-orange-400 font-display text-lg font-extrabold text-white">
+                V
               </span>
-              <span className="font-display text-xl font-extrabold tracking-tight text-white">
-                VASTOTECH
+              <span className="flex flex-col leading-tight">
+                <span className="font-display text-xl font-extrabold tracking-tight text-white">
+                  VASTOTECH
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-400">
+                  Intelligent Solutions
+                </span>
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
@@ -30,21 +39,36 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 space-y-3 text-sm text-slate-400">
-              <p className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0 text-orange-400" />
-                <span>Leisure Town, Malwadi, Hadapsar, Pune, Maharashtra, India</span>
-              </p>
+              {CONTACT.offices.map((office) => (
+                <p key={office.label} className="flex items-start gap-3">
+                  <MapPin size={16} className="mt-0.5 flex-shrink-0 text-orange-400" />
+                  <span>
+                    <strong className="text-slate-300">{office.label}:</strong> {office.address}
+                  </span>
+                </p>
+              ))}
+              {CONTACT.phones.map((phone) => (
+                <p key={phone} className="flex items-center gap-3">
+                  <Phone size={16} className="flex-shrink-0 text-orange-400" />
+                  <a
+                    href={`tel:${phone.replace(/[^\d+]/g, '')}`}
+                    className="hover:text-white"
+                  >
+                    {phone}
+                  </a>
+                </p>
+              ))}
+              {CONTACT.emails.map((email) => (
+                <p key={email} className="flex items-center gap-3">
+                  <Mail size={16} className="flex-shrink-0 text-orange-400" />
+                  <a href={`mailto:${email}`} className="hover:text-white">
+                    {email}
+                  </a>
+                </p>
+              ))}
               <p className="flex items-center gap-3">
-                <Phone size={16} className="flex-shrink-0 text-orange-400" />
-                <a href="tel:+919699675864" className="hover:text-white">
-                  (+91) 9699675864
-                </a>
-              </p>
-              <p className="flex items-center gap-3">
-                <Mail size={16} className="flex-shrink-0 text-orange-400" />
-                <a href="mailto:info@vastotech.in" className="hover:text-white">
-                  info@vastotech.in
-                </a>
+                <Clock size={16} className="flex-shrink-0 text-orange-400" />
+                <span>{CONTACT.hours}</span>
               </p>
             </div>
 
@@ -88,16 +112,16 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-navy-900/80">
         <Container className="flex flex-col items-center justify-between gap-3 py-5 text-sm text-slate-400 md:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} Vastotech Solutions Private Limited. All rights reserved.
+            &copy; {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
           </p>
           <ul className="flex gap-6">
             <li>
-              <Link href="#" className="hover:text-orange-400">
+              <Link href="/" className="hover:text-orange-400">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-orange-400">
+              <Link href="/" className="hover:text-orange-400">
                 Terms of Use
               </Link>
             </li>

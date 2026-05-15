@@ -12,21 +12,26 @@ export interface FeatureItem {
 }
 
 export interface SolutionItem {
-  id: string;
+  slug: string;
   title: string;
   tag: string;
   description: string;
+  longDescription: string;
+  features: string[];
   image: string;
-  href: string;
 }
 
 export interface CaseStudyItem {
-  id: string;
+  slug: string;
   category: string;
   title: string;
+  client: string;
+  industry: string;
   description: string;
   image: string;
-  href: string;
+  challenge: string;
+  solution: string;
+  results: string[];
 }
 
 export interface StatItem {
@@ -44,4 +49,11 @@ export interface ClientLogo {
 export interface FooterColumn {
   heading: string;
   links: NavLink[];
+}
+
+export interface ContactDetails {
+  phones: string[];
+  emails: string[];
+  offices: { label: string; address: string }[];
+  hours: string;
 }

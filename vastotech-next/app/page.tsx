@@ -8,6 +8,7 @@ import About from '@/components/sections/About';
 import CaseStudies from '@/components/sections/CaseStudies';
 import Stats from '@/components/sections/Stats';
 import CTA from '@/components/sections/CTA';
+import Contact from '@/components/sections/Contact';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <About />
         <CaseStudies />
         <Stats />
+        <Contact />
         <CTA />
       </main>
       <Footer />

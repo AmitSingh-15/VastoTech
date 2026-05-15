@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS } from '@/constants/data';
@@ -39,13 +40,15 @@ export default function Navbar() {
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8"
       >
-        <Link href="#hero" className="flex items-center gap-2" aria-label="Vastotech home">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-navy-800 text-white">
-            <span className="font-display text-base font-extrabold">V</span>
-          </span>
-          <span className="font-display text-lg font-extrabold tracking-tight text-navy-800 sm:text-xl">
-            VASTOTECH
-          </span>
+        <Link href="/" className="flex items-center" aria-label="Vastotech home">
+          <Image
+            src="/images/logo.png"
+            alt="Vastotech"
+            width={170}
+            height={48}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <ul className="hidden items-center gap-1 xl:flex">
@@ -60,7 +63,7 @@ export default function Navbar() {
             </li>
           ))}
           <li className="ml-2">
-            <Button href="#contact" size="sm">
+            <Button href="/#contact" size="sm">
               Get in Touch
             </Button>
           </li>
@@ -101,7 +104,7 @@ export default function Navbar() {
                 </li>
               ))}
               <li className="pt-3">
-                <Button href="#contact" size="md" className="w-full">
+                <Button href="/#contact" size="md" className="w-full">
                   Get in Touch
                 </Button>
               </li>

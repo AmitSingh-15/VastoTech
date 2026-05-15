@@ -7,9 +7,6 @@ import {
   Users,
   Award,
   Cpu,
-  Video,
-  Building2,
-  Radio,
 } from 'lucide-react';
 import type {
   NavLink,
@@ -19,15 +16,40 @@ import type {
   StatItem,
   ClientLogo,
   FooterColumn,
+  ContactDetails,
 } from '@/types';
 
+export const SITE = {
+  name: 'Vastotech',
+  legalName: 'Vastotech Solutions Private Limited',
+  domain: 'vastotech.in',
+  tagline: 'Intelligent Solutions. Connected Future.',
+};
+
+export const CONTACT: ContactDetails = {
+  phones: ['(+91) 9699675864', '(+91) 7276456203'],
+  emails: ['info@vastotech.in'],
+  offices: [
+    {
+      label: 'Head Office',
+      address:
+        'Leisure Town, Sadhunana Tupe Vasti, Malwadi, Hadapsar, Pune, Maharashtra, India',
+    },
+    {
+      label: 'Mumbai Branch',
+      address: 'Pinnacolo, Mira Bhayandar Rd, Mumbai, Maharashtra 401107',
+    },
+  ],
+  hours: 'Mon – Fri, 9:00 AM – 5:00 PM',
+};
+
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Industries', href: '#case-studies' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Resources', href: '#resources' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Solutions', href: '/#solutions' },
+  { label: 'Industries', href: '/case-studies' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Resources', href: '/case-studies' },
+  { label: 'Contact Us', href: '/#contact' },
 ];
 
 export const FEATURES: FeatureItem[] = [
@@ -54,45 +76,80 @@ export const FEATURES: FeatureItem[] = [
 ];
 
 export const CLIENT_LOGOS: ClientLogo[] = [
-  { name: 'Tata', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/320px-Tata_logo.svg.png' },
-  { name: 'Wipro', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png' },
-  { name: 'Adani', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Adani_2012_logo.png/320px-Adani_2012_logo.png' },
-  { name: 'Godrej', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Godrej_Logo.svg/320px-Godrej_Logo.svg.png' },
-  { name: 'Larsen & Toubro', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Larsen_%26_Toubro_Logo.svg/320px-Larsen_%26_Toubro_Logo.svg.png' },
-  { name: 'DLF', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/DLF_logo.svg/320px-DLF_logo.svg.png' },
-  { name: 'Cipla', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Cipla_Logo.svg/320px-Cipla_Logo.svg.png' },
+  { name: 'ACPL', src: '/images/clients/acpl.png' },
+  { name: 'Apex Juris', src: '/images/clients/apex1.jpeg' },
+  { name: 'ACG', src: '/images/clients/acg.png' },
+  { name: 'Cipla', src: '/images/clients/cipla.jpg' },
+  { name: 'AMC', src: '/images/clients/amc.jpg' },
+  { name: 'Tecn', src: '/images/clients/tecn.png' },
+  { name: 'Vrindavan', src: '/images/clients/vrindawan.png' },
+  { name: 'MM', src: '/images/clients/mm.jpg' },
+  { name: 'Brand', src: '/images/clients/b1.png' },
+  { name: 'Brand 2', src: '/images/clients/b2.png' },
+  { name: 'Brand 3', src: '/images/clients/b3.png' },
+  { name: 'Brand 4', src: '/images/clients/b4.png' },
+  { name: 'Brand 5', src: '/images/clients/b5.png' },
+  { name: 'Brand 6', src: '/images/clients/b6.png' },
+  { name: 'Brand 7', src: '/images/clients/b7.png' },
+  { name: 'Brand 8', src: '/images/clients/b8.jpeg' },
+  { name: 'Brand 9', src: '/images/clients/b9.png' },
+  { name: 'Brand 10', src: '/images/clients/b10.jpg' },
 ];
 
 export const SOLUTIONS: SolutionItem[] = [
   {
-    id: 'video-analytics',
+    slug: 'video-analytics-software',
     title: 'Video Analytics Software',
     tag: 'AI Surveillance',
     description:
       'AI-powered video analytics for enhanced surveillance, real-time insights and smarter decisions across distributed sites.',
-    image:
-      'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80',
-    href: '#solutions',
+    longDescription:
+      'Our AI-powered Video Analytics platform turns existing CCTV infrastructure into an intelligence layer. From people counting and behavior analysis to ANPR and PPE detection, we deliver real-time alerts and actionable dashboards that improve safety, efficiency and compliance.',
+    features: [
+      'Real-time object & behavior detection',
+      'People counting and zone analytics',
+      'ANPR (Automatic Number Plate Recognition)',
+      'PPE & safety compliance detection',
+      'Deploy on-prem, cloud or hybrid',
+      'Integration with existing DVR/NVR systems',
+    ],
+    image: '/images/projects/va1.jpg',
   },
   {
-    id: 'bms-software',
+    slug: 'advanced-bms-software',
     title: 'Advanced BMS Software',
     tag: 'Building Management',
     description:
       'Integrated Building Management Systems for HVAC, energy, lighting and security — automated and optimized end-to-end.',
-    image:
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=80',
-    href: '#solutions',
+    longDescription:
+      'A unified Building Management System that brings HVAC, lighting, energy, access control and security into a single operations cockpit. Reduce energy consumption, improve occupant comfort, and automate routine workflows across single buildings or distributed portfolios.',
+    features: [
+      'HVAC, lighting & energy automation',
+      'Centralized multi-site dashboard',
+      'Predictive maintenance alerts',
+      'Energy consumption analytics',
+      'Access control & visitor management',
+      'Open-protocol integration (BACnet, Modbus)',
+    ],
+    image: '/images/projects/bg1.jpg',
   },
   {
-    id: 'iot-solutions',
+    slug: 'iot-solutions',
     title: 'IoT Solutions',
     tag: 'Connected Devices',
     description:
       'End-to-end IoT platforms to connect, monitor and manage devices at scale — driving intelligence and operational efficiency.',
-    image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
-    href: '#solutions',
+    longDescription:
+      'From sensors and gateways to the cloud platform and analytics layer, we build production-grade IoT systems for asset tracking, environmental monitoring, industrial telemetry and smart-city deployments. Secure by design, scalable by default.',
+    features: [
+      'Edge-to-cloud device architecture',
+      'Real-time telemetry and alerting',
+      'Asset tracking and geofencing',
+      'Environmental & equipment monitoring',
+      'Custom dashboards and reports',
+      'Secure provisioning and OTA updates',
+    ],
+    image: '/images/projects/dc.jpg',
   },
 ];
 
@@ -105,34 +162,64 @@ export const ABOUT_BULLETS: string[] = [
 
 export const CASE_STUDIES: CaseStudyItem[] = [
   {
-    id: 'smart-surveillance',
+    slug: 'smart-surveillance-infrastructure',
     category: 'Video Analytics',
     title: 'Smart Surveillance for a Large Infrastructure Project',
+    client: 'Infrastructure Conglomerate',
+    industry: 'Construction & Infrastructure',
     description:
       'AI-based surveillance solution that improved site safety and reduced incidents by 40%.',
-    image:
-      'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=900&q=80',
-    href: '#case-studies',
+    image: '/images/projects/va1.jpg',
+    challenge:
+      'A large infrastructure client operated dozens of remote construction sites with limited safety oversight. Manual review of CCTV footage was reactive, slow, and missed near-miss events that could have prevented serious incidents.',
+    solution:
+      'We deployed our Video Analytics platform on existing camera infrastructure across all sites, with on-edge models for PPE detection, restricted-zone breach, and unsafe-behavior alerts. A central command dashboard gave the EHS team real-time visibility and audit-ready incident logs.',
+    results: [
+      '40% reduction in recordable safety incidents',
+      '70% faster incident response time',
+      '24×7 automated safety compliance monitoring',
+      'Full audit trail for regulatory reporting',
+    ],
   },
   {
-    id: 'energy-optimization',
+    slug: 'energy-optimization-commercial-building',
     category: 'BMS Solution',
     title: 'Energy Optimization for a Commercial Building',
+    client: 'Premium Commercial Real Estate',
+    industry: 'Commercial Real Estate',
     description:
       'Integrated BMS that reduced energy consumption by 25% and improved operational efficiency.',
-    image:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
-    href: '#case-studies',
+    image: '/images/projects/bg1.jpg',
+    challenge:
+      'A premium office tower struggled with rising energy costs and tenant comfort complaints. HVAC, lighting and access control ran on disconnected systems with no central visibility or automation.',
+    solution:
+      'We unified HVAC, lighting, and energy metering under our BMS platform with occupancy-driven schedules, predictive maintenance, and a single operations dashboard. Tenant comfort dashboards and automated fault detection rounded out the rollout.',
+    results: [
+      '25% reduction in total energy consumption',
+      '30% drop in tenant comfort complaints',
+      'Predictive maintenance reduced downtime by 60%',
+      'Single pane of glass for facility operations',
+    ],
   },
   {
-    id: 'asset-monitoring',
+    slug: 'iot-asset-monitoring',
     category: 'IoT Solution',
     title: 'IoT-enabled Asset Monitoring System',
+    client: 'Industrial Manufacturing',
+    industry: 'Manufacturing',
     description:
       'Real-time asset tracking and monitoring that improved visibility and reduced downtime.',
-    image:
-      'https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=80',
-    href: '#case-studies',
+    image: '/images/projects/dc.jpg',
+    challenge:
+      'A manufacturing firm could not reliably track high-value tooling and mobile assets across its multi-acre plant. Lost equipment, missed maintenance windows, and unplanned downtime were eroding margins.',
+    solution:
+      'We deployed BLE + LoRaWAN tags on critical assets and built a custom IoT platform with real-time location, condition monitoring, and predictive maintenance alerts. Integration with their existing ERP closed the loop on maintenance workflows.',
+    results: [
+      '95% asset visibility across the plant',
+      '35% reduction in unplanned downtime',
+      'Maintenance backlog cleared within 90 days',
+      'ROI achieved within 11 months',
+    ],
   },
 ];
 
@@ -147,41 +234,37 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     heading: 'Solutions',
     links: [
-      { label: 'Video Analytics Software', href: '#solutions' },
-      { label: 'Advanced BMS Software', href: '#solutions' },
-      { label: 'IoT Solutions', href: '#solutions' },
-      { label: 'All Solutions', href: '#solutions' },
+      { label: 'Video Analytics Software', href: '/solutions/video-analytics-software' },
+      { label: 'Advanced BMS Software', href: '/solutions/advanced-bms-software' },
+      { label: 'IoT Solutions', href: '/solutions/iot-solutions' },
+      { label: 'All Solutions', href: '/#solutions' },
     ],
   },
   {
     heading: 'Industries',
     links: [
-      { label: 'Commercial Buildings', href: '#case-studies' },
-      { label: 'Infrastructure', href: '#case-studies' },
-      { label: 'Manufacturing', href: '#case-studies' },
-      { label: 'Smart Cities', href: '#case-studies' },
-      { label: 'More Industries', href: '#case-studies' },
+      { label: 'Commercial Buildings', href: '/case-studies' },
+      { label: 'Infrastructure', href: '/case-studies' },
+      { label: 'Manufacturing', href: '/case-studies' },
+      { label: 'Smart Cities', href: '/case-studies' },
+      { label: 'All Industries', href: '/case-studies' },
     ],
   },
   {
     heading: 'Resources',
     links: [
-      { label: 'Blog', href: '#' },
-      { label: 'Case Studies', href: '#case-studies' },
-      { label: 'Whitepapers', href: '#' },
-      { label: 'Downloads', href: '#' },
-      { label: 'FAQs', href: '#' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'About Us', href: '/#about' },
+      { label: 'Contact', href: '/#contact' },
     ],
   },
   {
     heading: 'Company',
     links: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Careers', href: '#' },
-      { label: 'Partners', href: '#' },
-      { label: 'Contact Us', href: '#contact' },
+      { label: 'About Us', href: '/#about' },
+      { label: 'Solutions', href: '/#solutions' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Contact Us', href: '/#contact' },
     ],
   },
 ];
-
-export const SOLUTION_ICONS = { Video, Building2, Radio };

@@ -7,7 +7,7 @@ import Button from '@/components/ui/Button';
 
 export default function CTA() {
   return (
-    <section id="resources" className="relative overflow-hidden bg-navy-900 py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-navy-900 py-16 lg:py-20">
       <div
         aria-hidden
         className="absolute -right-16 top-0 h-full w-72 -skew-x-12 bg-orange-400/70"
@@ -34,7 +34,7 @@ export default function CTA() {
               </p>
             </div>
           </div>
-          <Button href="#contact" variant="primary" size="lg" className="flex-shrink-0">
+          <Button href="/#contact" variant="primary" size="lg" className="flex-shrink-0">
             Get in Touch
           </Button>
         </motion.div>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Write-Host \"CLIENTS:\"; Get-ChildItem \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\\\\clients\" | Select-Object Name; Write-Host \"PROJECTS:\"; Get-ChildItem \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\\\\projects\" | Select-Object Name; Write-Host \"ROOT IMAGES:\"; Get-ChildItem \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\" | Where-Object { -not $_.PSIsContainer } | Select-Object Name)",
+      "PowerShell(Copy-Item \"c:\\\\Amit\\\\VastoTech\\\\assets\\\\img\\\\logo.png\" \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\\\\logo.png\" -Verbose)",
+      "PowerShell($src = \"c:\\\\Amit\\\\VastoTech\\\\imgs\"; $dstC = \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\\\\clients\"; $dstP = \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\images\\\\projects\"; @\\(\"b1.png\",\"acpl.png\",\"apex1.jpeg\",\"acg.png\",\"cipla.jpg\",\"amc.jpg\",\"tecn.png\",\"vrindawan.png\",\"mm.jpg\",\"b2.png\",\"b3.png\",\"b4.png\",\"b5.png\",\"b6.png\",\"b7.png\",\"b8.jpeg\",\"b9.png\",\"b10.jpg\"\\) | ForEach-Object { Copy-Item \"$src\\\\$_\" \"$dstC\\\\$_\" }; @\\(\"va1.jpg\",\"ls.jpg\",\"dc.jpg\",\"crm.jpg\",\"lcm1.jpg\",\"wd.jpg\",\"bg1.jpg\",\"bg2.jpg\"\\) | ForEach-Object { Copy-Item \"$src\\\\$_\" \"$dstP\\\\$_\" }; Get-ChildItem $dstC | Measure-Object | Select-Object -ExpandProperty Count; Get-ChildItem $dstP | Measure-Object | Select-Object -ExpandProperty Count)",
+      "PowerShell(Copy-Item \"c:\\\\Amit\\\\VastoTech\\\\assets\\\\img\\\\favicon.jpg\" \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\favicon.ico\")",
+      "PowerShell(Copy-Item \"c:\\\\Amit\\\\VastoTech\\\\assets\\\\img\\\\apple-touch-icon.jpg\" \"c:\\\\Amit\\\\VastoTech\\\\vastotech-next\\\\public\\\\apple-touch-icon.png\")"
+    ]
+  }
+}

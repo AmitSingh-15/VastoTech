@@ -24,7 +24,7 @@ export default function CaseStudies() {
             }
           />
           <Link
-            href="#case-studies"
+            href="/case-studies"
             className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-orange-400 transition-colors hover:text-orange-500"
           >
             View All Case Studies
@@ -35,7 +35,7 @@ export default function CaseStudies() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {CASE_STUDIES.map((cs, idx) => (
             <motion.article
-              key={cs.id}
+              key={cs.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -51,14 +51,18 @@ export default function CaseStudies() {
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">{cs.description}</p>
                 <Link
-                  href={cs.href}
+                  href={`/case-studies/${cs.slug}`}
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-orange-400 transition-colors hover:text-orange-500"
                 >
                   Read More
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl">
+              <Link
+                href={`/case-studies/${cs.slug}`}
+                className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl"
+                aria-label={`Read ${cs.title}`}
+              >
                 <Image
                   src={cs.image}
                   alt={cs.title}
@@ -66,7 +70,7 @@ export default function CaseStudies() {
                   sizes="96px"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-              </div>
+              </Link>
             </motion.article>
           ))}
         </div>
