@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>VastoTech | Technology Redefined</title>
-    <!-- <meta content="" name="description">
-    <meta content="" name="keywords"> --> 
+    <title>VastoTech | Intelligent Solutions. Connected Future.</title>
+    <meta content="VastoTech delivers intelligent software and IoT solutions — video analytics, building management, and connected platforms — for a smarter, safer, more efficient world." name="description">
+    <meta content="VastoTech, Video Analytics, BMS, IoT, IT Solutions, Surveillance, Software Development" name="keywords">
+
     <!-- Favicons -->
     <link href="assets/img/favicon.jpg" rel="icon">
     <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
@@ -15,7 +16,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=Lato:ital,wght@0,400;0,700;0,900&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,94 +28,43 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: Append
-    * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-    * Updated: Mar 17 2024 with Bootstrap v5.3.3
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
-<style>
-.logo-img {
-    width: 100%;
-    max-width: 180px; /* Set maximum width for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    transition: all 0.3s ease;
-}
-
-/* Adjustments for different screen sizes */
-@media (max-width: 992px) {
+    <style>
     .logo-img {
-        max-width: 150px;
+        width: 100%;
+        max-width: 170px;
+        height: auto;
+        transition: all 0.3s ease;
     }
-}
+    @media (max-width: 992px) { .logo-img { max-width: 140px; } }
+    @media (max-width: 768px) { .logo-img { max-width: 120px; } }
 
-@media (max-width: 768px) {
-    .logo-img {
-        max-width: 120px;
-    }
-}
+    .navmenu { display: flex; align-items: center; gap: 20px; }
+    .navmenu ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; align-items: center; }
+    .navmenu ul li { position: relative; }
+    .mobile-nav-toggle { font-size: 24px; cursor: pointer; display: none; color: #0c3a6e; }
 
-/* Navigation styles */
-.navmenu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.navmenu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-}
-
-.navmenu ul li {
-    position: relative;
-}
-
-.navmenu ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-}
-
-.navmenu ul li a:hover,
-.navmenu ul li a.active {
-    color: #007bff; /* Highlight color */
-}
-
-/* Mobile nav toggle button */
-.mobile-nav-toggle {
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-}
-
-@media (max-width: 992px) {
-    .navmenu ul {
-        display: none; /* Hide menu by default on smaller screens */
-        flex-direction: column;
-        background-color: #f8f9fa;
-        position: absolute;
-        top: 60px; /* Adjust according to header height */
-        right: 0;
-        width: 200px;
-        padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+    @media (max-width: 1199px) {
+        .navmenu ul {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 240px;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(12, 58, 110, 0.12);
+            border-radius: 6px;
+            gap: 4px;
+        }
+        .navmenu ul.show { display: flex; }
+        .mobile-nav-toggle { display: inline-block; }
     }
 
-    .navmenu ul.show {
-        display: flex;
-    }
-
-    .mobile-nav-toggle {
-        display: inline-block;
-    }
-}
+    /* Brand-logo slider tweak for trusted-by */
+    .trusted-by .brand { width: 130px; height: 56px; border: none !important; }
+    .trusted-by .brand-logo-container { width: 110px; height: 44px; }
+    .trusted-by .slider-container { height: 5rem; }
     </style>
 </head>
 
@@ -122,651 +72,575 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
+        <div class="container-fluid d-flex align-items-center justify-content-between px-lg-5">
 
-		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-		<img src="assets/img/logo.png" alt="VastoTech" class="logo-img">
-		</a>
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="assets/img/logo.png" alt="VastoTech" class="logo-img">
+            </a>
 
-
-            <!-- Nav Menu -->
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="index.html#hero" class="active">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#portfolio">Portfolio</a></li>
-                    <li><a href="index.html#team">Customer Enagement</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#services">Solutions</a></li>
+                    <li><a href="#portfolio">Industries</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Resources</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#contact" class="btn-get-in-touch">Get In Touch</a></li>
                 </ul>
-
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav><!-- End Nav Menu -->
-
-            <a href="index.html#about"></a>
+            </nav>
 
         </div>
     </header><!-- End Header -->
 
     <main id="main">
 
-        <!-- Hero Section - Home Page -->
+        <!-- ======= Hero Section ======= -->
         <section id="hero" class="hero">
-
-            <img src="./imgs/bg2.jpg" alt="" data-aos="fade-in">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <h2 data-aos="fade-up" data-aos-delay="100">WELCOME TO VASTOTECH SOLUTIONS</h2>
-                        <p data-aos="fade-up" data-aos-delay="200">Redefining Technology, Elevating Innovation to New Heights</p>
+            <div class="container hero-wrap">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h1 class="hero-headline">
+                            Intelligent Solutions.
+                            <span class="accent">Connected Future.</span>
+                        </h1>
+                        <div class="hero-divider"></div>
+                        <p class="hero-tagline">
+                            Empowering businesses with intelligent software and IoT solutions for a smarter, safer and more efficient world.
+                        </p>
+                        <div class="hero-ctas">
+                            <a href="#services" class="btn-hero-primary">Our Solutions</a>
+                            <a href="#contact" class="btn-hero-secondary">Get In Touch</a>
+                        </div>
                     </div>
-                    <!-- <div class="col-lg-5">
-                      <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-                        <input type="text" class="form-control" placeholder="Enter email address">
-                        <input type="submit" class="btn btn-primary" value="Sign up">
-                      </form>
-                    </div> -->
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="hero-image">
+                            <img src="./imgs/bg2.jpg" alt="Connected Technology">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Feature Highlights + Product Cards -->
+                <div class="row gy-4 hero-product-cards" data-aos="fade-up">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hero-features">
+                            <div class="hero-feature-item">
+                                <div class="icon"><i class="bi bi-shield-check"></i></div>
+                                <div>
+                                    <h5>Secure Solutions</h5>
+                                    <p>Built with security at the core.</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                <div>
+                                    <h5>Operational Efficiency</h5>
+                                    <p>Streamline operations and reduce costs.</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+                                <div>
+                                    <h5>Scalable Platforms</h5>
+                                    <p>Flexible solutions that grow with you.</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <div class="icon"><i class="bi bi-person-check"></i></div>
+                                <div>
+                                    <h5>Better Decisions</h5>
+                                    <p>Real-time insights for confident choices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card bg-navy">
+                            <div>
+                                <div class="product-icon"><i class="bi bi-camera-video"></i></div>
+                                <h4>Video Analytics Software</h4>
+                                <p>AI-powered video analytics for enhanced surveillance, real-time insights and smarter decisions.</p>
+                            </div>
+                            <a href="#portfolio">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card bg-orange">
+                            <div>
+                                <div class="product-icon"><i class="bi bi-building"></i></div>
+                                <h4>Advance BMS Software</h4>
+                                <p>Integrated Building Management Systems for efficient operations, automation and optimal performance.</p>
+                            </div>
+                            <a href="#portfolio">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card bg-navy">
+                            <div>
+                                <div class="product-icon"><i class="bi bi-broadcast"></i></div>
+                                <h4>IoT Solutions</h4>
+                                <p>End-to-end IoT solutions to connect, monitor and manage devices — driving intelligence and efficiency.</p>
+                            </div>
+                            <a href="#portfolio">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section><!-- End Hero -->
 
-        </section><!-- End Hero Section -->
-        <!-- Clients Section - Home Page -->
-        <section id="clients" class="clients">
-
-            <!-- Brand slider -->
-            <div class="container mt-4">
-                <div class="rounded-3 pt-3 pb-3 bg-white">
-                    <h3 class="text-center pt-3 pb-3 accent-header">Top Customer</h3>
-                    <div class="slider-container d-flex overflow-hidden align-items-center">
-                        <div class="d-inline-flex overflow-hidden slider-forward-main">
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/b1.png');"></div>
-                                </div>
+        <!-- ======= Trusted By ======= -->
+        <section class="trusted-by">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-3 mb-3 mb-md-0">
+                        <p class="trusted-by-label mb-0">Trusted by<br>Industry Leaders</p>
+                    </div>
+                    <div class="col-lg-10 col-md-9">
+                        <div class="slider-container d-flex overflow-hidden align-items-center">
+                            <div class="d-inline-flex overflow-hidden slider-forward-main">
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/b1.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/acpl.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/apex1.jpeg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/acg.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/cipla.jpg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/amc.jpg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/tecn.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/vrindawan.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/mm.jpg');"></div></div></div>
                             </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/acpl.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/apex1.jpeg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/acg.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/cipla.jpg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/amc.jpg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/tecn.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/vrindawan.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/mm.jpg');"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-inline-flex overflow-hidden slider-forward-secondary">
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/b1.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/acpl.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/apex1.jpeg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/acg.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/cipla.jpg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/amc.jpg');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/tecn.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/vrindawan.png');"></div>
-                                </div>
-                            </div>
-                            <div class="brand border rounded ms-3 p-2">
-                                <div class="brand-logo-container">
-                                    <div class="brand-logo p-2" style="background-image: url('./imgs/mm.jpg');"></div>
-                                </div>
+                            <div class="d-inline-flex overflow-hidden slider-forward-secondary">
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/b1.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/acpl.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/apex1.jpeg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/acg.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/cipla.jpg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/amc.jpg');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/tecn.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/vrindawan.png');"></div></div></div>
+                                <div class="brand p-2"><div class="brand-logo-container"><div class="brand-logo" style="background-image: url('./imgs/mm.jpg');"></div></div></div>
                             </div>
                         </div>
                     </div>
-               
+                </div>
+            </div>
+        </section><!-- End Trusted By -->
 
-        </section><!-- End Clients Section -->
-        <!-- About Section - Home Page -->
-        <section id="about" class="about">
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-              <div class="row align-items-center gy-5">
-      
-                  <!-- About Us Section (Left Side) -->
-                  <div class="col-lg-6">
-                      <div class="about-box bg-light p-4">
-                          <div class="member-img mb-4">
-                              <img src="./imgs/va1.jpg" class="img-fluid" alt="About Us Image">
-                          </div>
-                          <div class="about-content">
-                              <h3>About Us</h3>
-                              <p>Welcome to VASTOTECH SOLUTIONS, where we redefine the boundaries of technological accessibility. Our goal is simple yet impactful: to deliver user-friendly consumer products at affordable prices, ensuring that technology is accessible to all. With a skilled team boasting over a decade of experience in electrical engineering, IT, solution design, and software development, we excel as a leading supplier and solution provider of premium products and customized solutions. Our mission is to simplify technology and make it universally accessible, empowering individuals and businesses alike.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- End About Us Section -->
-      
-                  <!-- Icon Boxes (Right Side) -->
-                  <div class="col-lg-6">
-                      <div class="row gy-4">
-      
-                          <!-- Mission Box -->
-                          <div class="col-md-6">
-                              <div class="icon-box bg-light p-4" data-aos="fade-up" data-aos-delay="200">
-                                  <i class="bi bi-buildings"></i>
-                                  <h3>Mission</h3>
-                                  <p>We are on a mission to transform the tech landscape by democratizing innovation and accessibility. Through pioneering solutions and a commitment to excellence, we empower individuals and businesses to harness the power of advanced technology. Join us as we redefine the boundaries of possibility in the world of tech.</p>
-                              </div>
-                          </div>
-                          <!-- End Mission Box -->
-      
-                          <!-- Core Values Box -->
-                          <div class="col-md-6">
-                              <div class="icon-box bg-light p-4" data-aos="fade-up" data-aos-delay="300">
-                                  <i class="bi bi-clipboard-pulse"></i>
-                                  <h3>Core Values</h3>
-                                  <p>Our core values are the bedrock of our endeavors. We are fueled by an unwavering dedication to innovation, constantly pushing boundaries. Integrity is fundamental, fostering transparency, honesty, and trust. We prioritize excellence, striving for quality and continuous improvement. Collaboration is central to our success, enabling us to deliver exceptional solutions and services that positively impact our clients and community.</p>
-                              </div>
-                          </div>
-                          <!-- End Core Values Box -->
-      
-                          <!-- Integrity & Code Of Conduct Box -->
-                          <div class="col-md-6">
-                              <div class="icon-box bg-light p-4" data-aos="fade-up" data-aos-delay="400">
-                                  <i class="bi bi-command"></i>
-                                  <h3>Integrity & Code Of Conduct</h3>
-                                  <p>Integrity is foundational to our business practices and interactions. We uphold strict ethical standards and build trust with stakeholders through transparency, honesty, and fairness. Our team prioritizes professionalism and accountability, ensuring alignment with our values. We emphasize diversity, confidentiality, and compliance, fostering a culture of integrity and responsibility. Integrity at VastoTech earns the confidence and respect of clients, partners, and communities.</p>
-                              </div>
-                          </div>
-                          <!-- End Integrity & Code Of Conduct Box -->
-      
-                          <!-- Why VastoTech? Box -->
-                          <div class="col-md-6">
-                              <div class="icon-box bg-light p-4" data-aos="fade-up" data-aos-delay="500">
-                                  <i class="bi bi-graph-up-arrow"></i>
-                                  <h3>Why VastoTech?</h3>
-                                  <p>We lead the technology industry with relentless innovation, delivering cutting-edge solutions that propel businesses forward. We prioritize customer satisfaction, exceeding expectations with tailored services. Our talented team offers comprehensive expertise in software development, IT services, IoT solutions, and infrastructure support, staying ahead with the latest technologies. Integrity and transparency define our commitment to building lasting partnerships based on trust and mutual respect. Partner with VastoTech for innovative solutions and exceptional service that drive your success.</p>
-                              </div>
-                          </div>
-                          <!-- End Why VastoTech? Box -->
-      
-                      </div>
-                  </div>
-                  <!-- End Icon Boxes (Right Side) -->
-      
-              </div>
-          </div>
-      </section>
-      
-
-        </section><!-- End About Section -->
-        <!-- Services Section - Home Page -->
+        <!-- ======= Our Solutions ======= -->
         <section id="services" class="services">
-
-            <!--  Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>INNOVATIVE SOLUTIONS FOR EVERY BUSINESS NEED</p>
-            </div><!-- End Section Title -->
-
             <div class="container">
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <p class="section-eyebrow">Our Solutions</p>
+                        <h2 class="section-heading">Technology that connects.<br>Solutions that transform.</h2>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <p class="mb-3 text-muted">VastoTech offers a powerful suite of software and IoT solutions designed to help businesses automate operations, enhance security, and make data-driven decisions.</p>
+                        <a href="#portfolio" class="btn-hero-primary">Explore All Solutions</a>
+                    </div>
+                </div>
 
                 <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="solution-card">
+                            <div class="card-image" style="background-image: url('./imgs/va1.jpg');">
+                                <span class="card-tag">Video Analytics</span>
+                            </div>
+                            <div class="card-body-custom">
+                                <h4>Video Analytics Software</h4>
+                                <p>Advanced AI video analytics for surveillance, people counting, behavior analysis, ANPR, and more.</p>
+                                <a href="#portfolio" class="view-details">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="solution-card">
+                            <div class="card-image" style="background-image: url('./imgs/bg1.jpg');">
+                                <span class="card-tag">BMS Solution</span>
+                            </div>
+                            <div class="card-body-custom">
+                                <h4>Advance BMS Software</h4>
+                                <p>Comprehensive building management platforms for HVAC, lighting, energy, security and more.</p>
+                                <a href="#portfolio" class="view-details">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="solution-card">
+                            <div class="card-image" style="background-image: url('./imgs/dc.jpg');">
+                                <span class="card-tag">IoT Solution</span>
+                            </div>
+                            <div class="card-body-custom">
+                                <h4>IoT Solutions</h4>
+                                <p>IoT platforms and devices that enable seamless connectivity, monitoring and predictive insights.</p>
+                                <a href="#portfolio" class="view-details">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Our Solutions -->
 
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <p class="section-eyebrow">About VastoTech</p>
+                        <h2 class="section-heading">Building a smarter<br>and connected future</h2>
+                        <p class="text-muted mb-4">At Vastotech, we combine deep domain expertise with cutting-edge technologies to deliver innovative solutions that solve real-world challenges. With over a decade of experience in electrical engineering, IT, IoT and software development, we partner with businesses to make technology accessible and impactful.</p>
+                        <ul class="about-bullets">
+                            <li>Customer-centric approach</li>
+                            <li>Innovation-driven solutions</li>
+                            <li>Reliable support &amp; service</li>
+                            <li>Experienced team of experts</li>
+                        </ul>
+                        <a href="#contact" class="btn-hero-primary">Know More About Us</a>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="about-image-wrap">
+                            <img src="./imgs/bg1.jpg" alt="Building a smarter future">
+                            <div class="experience-badge">
+                                <span class="num">10+</span>
+                                <span class="label">Years of Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About -->
+
+        <!-- ======= Services / What We Do ======= -->
+        <section id="extra-services" class="services" style="background:#ffffff;">
+            <div class="container section-title" data-aos="fade-up">
+                <p class="section-eyebrow">What We Do</p>
+                <h2 class="section-heading text-center">Innovative solutions for every business need</h2>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item d-flex">
                             <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                             <div>
                                 <h4 class="title"><a href="#" class="stretched-link">Software Development Solutions</a></h4>
-                                <p class="description">At our company, we excel in crafting bespoke software solutions that drive efficiency and innovation within your organization. Whether you seek custom applications, seamless system integration, or transformative digital solutions, our skilled development team is poised to collaborate and deliver tailored solutions. Partner with us to unlock your business's full potential through cutting-edge software development.</p>
+                                <p class="description">We craft bespoke software that drives efficiency and innovation — custom applications, system integration and digital transformation tailored to your business.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Cutting-Edge IT & IoT Solutions</a></h4>
-                                <p class="description">We stand as your premier provider of state-of-the-art IT products and customized software solutions. With a focus on innovation, our experienced team delivers out-of-the-box solutions meticulously tailored for both MSMEs and large enterprises. Recognized by the Indian government for our expertise in video analytics and IoT, we bring cutting-edge technology solutions to your doorstep.</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Cutting-Edge IT &amp; IoT Solutions</a></h4>
+                                <p class="description">State-of-the-art IT products and customized software for MSMEs and enterprises — recognized for our expertise in video analytics and IoT.</p>
                             </div>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item d-flex">
                             <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Optimized Valves & Instrumentation</a></h4>
-                                <p class="description">Explore our extensive range of valves and flow-control solutions meticulously designed to enhance safety, reliability, and performance across the global oil & gas, power, and allied industries. Complementing our valve offerings are essential infrastructure products such as cables, instrumentation sensors, and electrical components, providing robust support for your operational needs.</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Optimized Valves &amp; Instrumentation</a></h4>
+                                <p class="description">Valves and flow-control solutions designed for safety, reliability and performance across oil &amp; gas, power and allied industries.</p>
                             </div>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-shield-lock"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Reliable Security, Safety & Support Services</a></h4>
-                                <p class="description">Count on us for high-quality security and safety products, including dependable personal protection equipment trusted across diverse industries. Our commitment includes a 100% replacement guarantee for safety shoes and authorized supplies of leading security systems. Furthermore, our comprehensive support services ensure the optimal operation and security of your systems.</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Security, Safety &amp; Support Services</a></h4>
+                                <p class="description">Trusted personal protection equipment, authorized security systems and comprehensive support services to keep your operations secure.</p>
                             </div>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-hdd-network"></i></div>
                             <div>
-                                <h4 class="title"><a href="##" class="stretched-link">Comprehensive Infrastructure Support</a></h4>
-                                <p class="description">Beyond delivering cutting-edge products, we offer comprehensive infrastructure support services tailored to your specific requirements. From initial installation to ongoing maintenance and technical guidance, our dedicated team is committed to optimizing the efficiency and effectiveness of your operations. Specializing in setting up virtualization environments, configuring networks, implementing containerization and orchestration solutions, firewall configuration, system architecture design, and system automation, we are poised to elevate your infrastructure to meet your business goals with advanced technology solutions.</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Infrastructure Support</a></h4>
+                                <p class="description">From installation and configuration to virtualization, networks, containerization and automation — we elevate your infrastructure end-to-end.</p>
                             </div>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item d-flex">
                             <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">ANNUAL MAINTENANCE CONTRACT</a></h4>
-                                <p class="description">Ensure the smooth operation and longevity of your technology infrastructure with our Annual Maintenance Contract (AMC) services. Our expert team provides comprehensive maintenance and support to keep your systems running optimally throughout the year. Benefit from proactive monitoring, timely updates, and priority assistance to minimize downtime and maximize productivity. Partner with us for hassle-free maintenance and peace of mind.</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Annual Maintenance Contract</a></h4>
+                                <p class="description">Proactive monitoring, timely updates and priority support to keep your technology infrastructure running optimally year-round.</p>
                             </div>
                         </div>
-                    </div><!-- End Service Item -->
-
-                </div>
-
-            </div>
-
-        </section><!-- End Services Section -->
-        <!-- Features Section - Home Page -->
-        <!-- <section id="features" class="features">
-
-           Section Title -->
-        <!-- <div class="container section-title" data-aos="fade-up">
-          <h2>Features</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>End Section Title -->
-        <!--
-              <div class="container">
-
-                <div class="row gy-4 align-items-center features-item">
-                  <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Corporis temporibus maiores provident</h3>
-                    <p>
-                      Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                    </p>
-                    <a href="#" class="btn btn-get-started">Get Started</a>
-                  </div>
-                  <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-                    <div class="image-stack">
-                      <img src="assets/img/features-light-1.jpg" alt="" class="stack-front">
-                      <img src="assets/img/features-light-2.jpg" alt="" class="stack-back">
                     </div>
-                  </div>
-                </div>Features Item -->
-        <!-- <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt=""> -->
-        <!-- </div>
-        <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-          <h3>Sunt consequatur ad ut est nulla</h3>
-          <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-          <ul>
-            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
-          </ul>
-          <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
-        </div> -->
-        </div><!-- Features Item -->
-        </div>
+                </div>
+            </div>
+        </section><!-- End Extra Services -->
 
-        </section><!-- End Features Section -->
-        <!-- Portfolio Section - Home Page -->
-        <section id="portfolio" class="portfolio">
-
-          <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
-              <h2>Portfolio</h2>
-              <p>Explore our showcase of transformative solutions and innovative projects.</p>
-          </div>
-  
-          <div class="container">
-  
-              <div class="row gy-5">
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                          <img src="./imgs/va1.jpg" class="img-fluid" alt="AI based Video Analytics">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>AI based Video Analytics</h4>
-                          <span>Transforming Video Insights with AI</span>
-                          <p>AI-based video analytics leverages advanced technology for real-time insights, enhancing security, safety, efficiency, and decision-making processes.</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-img">
-                          <img src="./imgs/ls.jpg" class="img-fluid" alt="Logistics Management Software">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>Logistics Management Software</h4>
-                          <span>Streamline Logistics, Elevate Efficiency</span>
-                          <p>Optimize logistics operations seamlessly with our comprehensive and intuitive logistics management software solution.</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                          <img src="./imgs/dc.jpg" class="img-fluid" alt="Datacenter Operation Support">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>Datacenter Operation Support</h4>
-                          <span>Empowering Datacenter Excellence</span>
-                          <p>Comprehensive operational support for datacenters, ensuring uptime, security, and efficiency with expert management and proactive solutions.</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-                      <div class="member-img">
-                          <img src="./imgs/crm.jpg" class="img-fluid" alt="CRM And ERP">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>CRM And ERP</h4>
-                          <span>Unifying Business Operations</span>
-                          <p>Integrate CRM and ERP systems to streamline processes, optimize workflows, and gain comprehensive business insights.</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-                      <div class="member-img">
-                          <img src="./imgs/lcm1.jpg" class="img-fluid" alt="Labour Contract Management">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>Labour Contract Management</h4>
-                          <span>Efficiently Manage Labor Contracts</span>
-                          <p>Comprehensive labor contract management system ensuring compliance, engagement, and optimal resource utilization for streamlined workforce operations.</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-                      <div class="member-img">
-                          <img src="./imgs/wd.jpg" class="img-fluid" alt="Website Development">
-                      </div>
-                      <div class="member-info text-center">
-                          <h4>Website Development</h4>
-                          <span>Crafting Digital Experiences</span>
-                          <p>We specialize in website development, creating custom, user-centric designs that align with your brand and achieve business goals.</p>
-                      </div>
-                  </div>
-  
-              </div><!-- End row -->
-  
-          </div><!-- End container -->
-  
-      </section><!-- End portfolio section -->
-
-        </section><!-- End Portfolio Section -->
-        <!-- Team Section - Home Page -->
-        <section id="team" class="team">
-
-            <!--  Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-              <h2>Customer Engagement</h2>
-              <p>Empowering Relationships, Elevating Experiences.</p>
-          </div><!-- End Section Title -->
-      
-          <div class="container">
-      
-              <div class="row gy-5">
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-info text-center">
-                          <h4>Product Demo</h4>
-                          <p>Industry specific demonstration of our product with Sales & Customer support team.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-info text-center">
-                          <h4>Proof of Concept</h4>
-                          <p>Actual deployment of up to 5 high priority use cases of the customer.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-info text-center">
-                          <h4>Pilot</h4>
-                          <p>Deployment of any number of readily available use cases of the customer.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-                      <div class="member-info text-center">
-                          <h4>Deployment</h4>
-                          <p>Requirements gathering, CCTV/DVR/NVR Network Details, Cameras vs Use Case Capturing.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-                      <div class="member-info text-center">
-                          <h4>Installation & Deployment</h4>
-                          <p>On Prem/Cloud/Hybrid Platform Installation, Addition of Cameras and Use Cases.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-                      <div class="member-info text-center">
-                          <h4>Performance Monitoring & User Training</h4>
-                          <p>Accuracy Analysis of Detections/Alerts, Tweaking of threshold parameters, Training and handover.</p>
-                      </div>
-                  </div><!-- End Team Member -->
-      
-              </div>
-      
-          </div>
-      
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-          <script>
-              AOS.init({
-                  duration: 800,
-                  easing: 'ease-in-out',
-                  once: true // Animation will occur only once
-              });
-          </script>
-        </section><!-- End Team Section -->
-
-
-        <!-- Call-to-action Section - Home Page -->
-        <section id="call-to-action" class="call-to-action">
-
-            <img src="assets/img/cta-bg.jpg" alt="">
-
+        <!-- ======= Case Studies ======= -->
+        <section class="case-studies">
             <div class="container">
-                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-xl-10">
-                        <div class="text-center">
-                            <h3>Call To Action</h3>
-                            <p>
-                                CALL TO ACTION
-                                Ready to elevate your business with innovative technology solutions? Contact us today to discover how VastoTech can empower your organization to thrive in the digital age. Let's redefine what's possible together.
-                            </p>
-                            <a class="cta-btn" href="#">Call To Action</a>
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <p class="section-eyebrow">Case Studies</p>
+                        <h2 class="section-heading">Real solutions.<br>Real impact.</h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+                        <a href="#portfolio" class="view-details" style="font-weight:700; text-transform:uppercase;">View All Case Studies <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-card">
+                            <div class="case-text">
+                                <p class="case-eyebrow">Video Analytics</p>
+                                <h5>Smart Surveillance for a Large Infrastructure Project</h5>
+                                <p>AI-based surveillance solution that improved site safety and reduced incidents by 40%.</p>
+                                <a href="#portfolio" class="case-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="case-img"><img src="./imgs/va1.jpg" alt="Smart Surveillance"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="case-card">
+                            <div class="case-text">
+                                <p class="case-eyebrow">BMS Solution</p>
+                                <h5>Energy Optimization for a Commercial Building</h5>
+                                <p>Integrated BMS that reduced energy consumption by 25% and improved operational efficiency.</p>
+                                <a href="#portfolio" class="case-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="case-img"><img src="./imgs/bg1.jpg" alt="Energy Optimization"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="case-card">
+                            <div class="case-text">
+                                <p class="case-eyebrow">IoT Solution</p>
+                                <h5>IoT-enabled Asset Monitoring System</h5>
+                                <p>Real-time asset tracking and monitoring solution that improved visibility and reduced downtime.</p>
+                                <a href="#portfolio" class="case-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="case-img"><img src="./imgs/dc.jpg" alt="IoT Asset Monitoring"></div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section><!-- End Case Studies -->
 
-        </section><!-- End Call-to-action Section -->
-        <!-- Testimonials Section - Home Page -->
-        <section id="testimonials" class="testimonials">
-
+        <!-- ======= Stats Bar ======= -->
+        <section class="stats-bar">
             <div class="container">
-
-                <div class="row align-items-center">
-
-                    <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Testimonials</h3>
-                        <p>
-                            These testimonials highlight the exceptional quality and effectiveness of the custom software development, IoT solutions, and web development services provided by the company.
-                        </p>
+                <div class="row gy-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span class="stat-num">150+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
                     </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="bi bi-people"></i>
+                            <span class="stat-num">100+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="bi bi-award"></i>
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="bi bi-person-workspace"></i>
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">Experts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Stats Bar -->
 
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container section-title" data-aos="fade-up">
+                <p class="section-eyebrow">Portfolio</p>
+                <h2 class="section-heading text-center">Transformative solutions, real-world impact</h2>
+            </div>
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img"><img src="./imgs/va1.jpg" class="img-fluid" alt="AI based Video Analytics"></div>
+                        <div class="member-info text-center">
+                            <h4>AI based Video Analytics</h4>
+                            <span>Transforming Video Insights with AI</span>
+                            <p>AI-based video analytics leverages advanced technology for real-time insights, enhancing security, safety, efficiency, and decision-making.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-img"><img src="./imgs/ls.jpg" class="img-fluid" alt="Logistics Management"></div>
+                        <div class="member-info text-center">
+                            <h4>Logistics Management Software</h4>
+                            <span>Streamline Logistics, Elevate Efficiency</span>
+                            <p>Optimize logistics operations with our comprehensive and intuitive logistics management solution.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member-img"><img src="./imgs/dc.jpg" class="img-fluid" alt="Datacenter Operations"></div>
+                        <div class="member-info text-center">
+                            <h4>Datacenter Operation Support</h4>
+                            <span>Empowering Datacenter Excellence</span>
+                            <p>Comprehensive operational support ensuring uptime, security, and efficiency with expert management.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-img"><img src="./imgs/crm.jpg" class="img-fluid" alt="CRM and ERP"></div>
+                        <div class="member-info text-center">
+                            <h4>CRM And ERP</h4>
+                            <span>Unifying Business Operations</span>
+                            <p>Integrate CRM and ERP systems to streamline processes, optimize workflows, and gain insights.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+                        <div class="member-img"><img src="./imgs/lcm1.jpg" class="img-fluid" alt="Labour Contract Management"></div>
+                        <div class="member-info text-center">
+                            <h4>Labour Contract Management</h4>
+                            <span>Efficiently Manage Labor Contracts</span>
+                            <p>Comprehensive labor contract management system ensuring compliance and optimal resource utilization.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+                        <div class="member-img"><img src="./imgs/wd.jpg" class="img-fluid" alt="Website Development"></div>
+                        <div class="member-info text-center">
+                            <h4>Website Development</h4>
+                            <span>Crafting Digital Experiences</span>
+                            <p>Custom, user-centric websites that align with your brand and achieve business goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Portfolio -->
+
+        <!-- ======= Customer Engagement ======= -->
+        <section id="team" class="team">
+            <div class="container section-title" data-aos="fade-up">
+                <p class="section-eyebrow">Customer Engagement</p>
+                <h2 class="section-heading text-center">Empowering relationships, elevating experiences</h2>
+            </div>
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-info text-center">
+                            <h4>Product Demo</h4>
+                            <p>Industry-specific demonstrations of our products with sales and customer support teams.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-info text-center">
+                            <h4>Proof of Concept</h4>
+                            <p>Actual deployment of up to 5 high-priority use cases for the customer.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member-info text-center">
+                            <h4>Pilot</h4>
+                            <p>Deployment of any number of readily available use cases of the customer.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-info text-center">
+                            <h4>Deployment</h4>
+                            <p>Requirements gathering, CCTV/DVR/NVR network details, cameras vs use case capturing.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+                        <div class="member-info text-center">
+                            <h4>Installation &amp; Deployment</h4>
+                            <p>On-prem / cloud / hybrid platform installation, addition of cameras and use cases.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+                        <div class="member-info text-center">
+                            <h4>Monitoring &amp; Training</h4>
+                            <p>Accuracy analysis of detections/alerts, threshold tuning, training and handover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Customer Engagement -->
+
+        <!-- ======= Testimonials ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+                        <p class="section-eyebrow">Testimonials</p>
+                        <h3 class="section-heading">What our clients say</h3>
+                        <p>These testimonials highlight the exceptional quality of our custom software, IoT solutions and web development services.</p>
+                    </div>
                     <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-
                         <div class="swiper">
                             <script type="application/json" class="swiper-config">
                                 {
-                                "loop": true,
-                                "speed": 600,
-                                "autoplay": {
-                                "delay": 5000
-                                },
-                                "slidesPerView": "auto",
-                                "pagination": {
-                                "el": ".swiper-pagination",
-                                "type": "bullets",
-                                "clickable": true
-                                }
+                                    "loop": true,
+                                    "speed": 600,
+                                    "autoplay": { "delay": 5000 },
+                                    "slidesPerView": "auto",
+                                    "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
                                 }
                             </script>
                             <div class="swiper-wrapper">
-
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
                                         <div class="d-flex">
                                             <img src="imgs/acpl.png" class="testimonial-img flex-shrink-0" alt="">
                                             <div>
                                                 <h3>Baban Shelke</h3>
-                                                <h4>Ceo & Founder of ACPL</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                                </div>
+                                                <h4>CEO &amp; Founder of ACPL</h4>
+                                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                             </div>
                                         </div>
                                         <p>
                                             <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Our experience with the custom software development services provided by this company was outstanding. They listened carefully to our requirements and delivered a tailored solution that exceeded our expectations. The software has streamlined our operations and improved our efficiency significantly." </span>
+                                            <span>Our experience with the custom software development services provided by this company was outstanding. They listened carefully and delivered a tailored solution that exceeded our expectations.</span>
                                             <i class="bi bi-quote quote-icon-right"></i>
                                         </p>
                                     </div>
-                                </div><!-- End testimonial item -->
-
+                                </div>
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
                                         <div class="d-flex">
                                             <img src="imgs/b8.jpeg" class="testimonial-img flex-shrink-0" alt="">
                                             <div>
                                                 <h3>Intellipro</h3>
-                                                <!-- <h4>CEO of Intellipro</h4> -->
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                                </div>
+                                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                             </div>
                                         </div>
                                         <p>
                                             <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>"We engaged with this company for IoT solutions, and they delivered an exceptional product that integrated seamlessly with our existing systems. Their expertise in IoT technology is truly impressive, and the solution they provided has added tremendous value to our business." </span>
+                                            <span>We engaged with this company for IoT solutions, and they delivered an exceptional product that integrated seamlessly. Their expertise is truly impressive.</span>
                                             <i class="bi bi-quote quote-icon-right"></i>
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
                                         <div class="d-flex">
                                             <img src="imgs/apex1.jpeg" class="testimonial-img flex-shrink-0" alt="">
                                             <div>
-                                                <h3>ADV.Hemant Shukla</h3>
-                                                <h4>Managing Director of Apex Juris LLP</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                                </div>
+                                                <h3>Adv. Hemant Shukla</h3>
+                                                <h4>Managing Director, Apex Juris LLP</h4>
+                                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                             </div>
                                         </div>
                                         <p>
                                             <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>"We are thrilled with the web development services offered by this company. They created a modern, user-friendly website that perfectly represents our brand. The team was professional, responsive, and creative throughout the entire process." </span>
+                                            <span>We are thrilled with the web development services. They created a modern, user-friendly website that perfectly represents our brand.</span>
                                             <i class="bi bi-quote quote-icon-right"></i>
                                         </p>
                                     </div>
-                                </div><!-- End testimonial item -->
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="imgs/freelancer.jpg" class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>Satish Tiwari</h3>
-                                                <h4>Freelancer</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>
-                                                "Highly skilled freelancer website developer. Transformed our vision into a stunning, functional site. Excellent communication and timely delivery. Impressive work!"
-                                            </span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
+                                </div>
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
                                         <div class="d-flex">
@@ -774,271 +648,171 @@
                                             <div>
                                                 <h3>Vrindavan Milk Supplier</h3>
                                                 <h4>Dairy Business</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                                </div>
+                                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                             </div>
                                         </div>
                                         <p>
                                             <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>
-                                                "Efficient dairy billing management software. Simplifies invoicing, inventory, and payments. Streamlined our operations and boosted productivity significantly. Highly recommended solution."
-                                            </span>
+                                            <span>Efficient dairy billing management software. Simplifies invoicing, inventory and payments. Streamlined our operations and boosted productivity.</span>
                                             <i class="bi bi-quote quote-icon-right"></i>
                                         </p>
                                     </div>
-                                </div><!-- End testimonial item -->
-
+                                </div>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
+        </section><!-- End Testimonials -->
 
-        </section><!-- End Testimonials Section -->
-        <!-- Recent-posts Section - Home Page -->
-        <!-- <section id="recent-posts" class="recent-posts"> -->
-        <!--  Section Title -->
-        <!-- <div class="container section-title" data-aos="fade-up">
-          <h2>Recent Posts</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-        </div><!-- End Section Title -->
-        <!-- <div class="container">
-
-          <div class="row gy-4">
-
-            <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <article>
-
-                <div class="post-img">
-                  <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                </div>
-
-                <p class="post-category">Politics</p>
-
-                <h2 class="title">
-                  <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-                </h2>
-
-                <div class="d-flex align-items-center">
-                  <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                  <div class="post-meta">
-                    <p class="post-author">Maria Doe</p>
-                    <p class="post-date">
-                      <time datetime="2022-01-01">Jan 1, 2022</time>
-                    </p>
-                  </div>
-                </div>
-
-              </article> -->
-        </div><!-- End post list item -->
-        <!-- <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <article>
-
-            <div class="post-img">
-              <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Sports</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author">Allisa Mayer</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 5, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article> -->
-        </div><!-- End post list item -->
-        <!-- <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <article>
-
-            <div class="post-img">
-              <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Entertainment</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author">Mark Dower</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 22, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article> -->
-        </div><!-- End post list item -->
-        </div><!-- End recent posts list -->
-        </div>
-
-        </section><!-- End Recent-posts Section -->
-        <!-- Contact Section - Home Page -->
-        <section id="contact" class="contact">
-
-            <!--  Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Ready to elevate your business with innovative technology solutions? Contact us today to discover how VastoTech can empower your organization to thrive in the digital age. Let's redefine what's possible together.</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-12">
-
-                        <div class="row gy-12">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p><strong>Head Office:</strong> Leisure Town, Sadhunana Tupe Vasti, Malwadi, Hadapsar, Pune, Maharashtra, India.</p>
-                                    <p><strong>Mumbai Branch Office:</strong> Pinnacolo, Mira Bhayandar Rd, Mumbai, Maharashtra 401107</p>
-                                    <!-- <p>New York, NY 535022</p> -->
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>(+91) 9699675864</p>
-                                    <p>(+91) 7276456203</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    	<a href="mailto:info@vastotech.in" title="company Email">
-                            <p><span>info@vastotech.in </span></p>
-                        </a>
-                                    <p>We look forward to hearing from you and assisting with your technology needs!</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
+        <!-- ======= Final CTA Bar ======= -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="cta-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                        <div>
+                            <h3>Ready to transform your business?</h3>
+                            <p>Let's connect and build intelligent solutions for your success.</p>
                         </div>
-
                     </div>
-
+                    <a href="#contact" class="btn-hero-primary">Get In Touch</a>
                 </div>
-
             </div>
+        </section><!-- End Final CTA -->
 
-        </section><!-- End Contact Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container section-title" data-aos="fade-up">
+                <p class="section-eyebrow">Contact</p>
+                <h2 class="section-heading text-center">Let's build something great together</h2>
+                <p>Ready to elevate your business with innovative technology solutions? Contact us today.</p>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="info-item" data-aos="fade" data-aos-delay="200">
+                            <i class="bi bi-geo-alt"></i>
+                            <h3>Address</h3>
+                            <p><strong>Head Office:</strong> Leisure Town, Sadhunana Tupe Vasti, Malwadi, Hadapsar, Pune, Maharashtra, India.</p>
+                            <p><strong>Mumbai Branch:</strong> Pinnacolo, Mira Bhayandar Rd, Mumbai, Maharashtra 401107</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item" data-aos="fade" data-aos-delay="300">
+                            <i class="bi bi-telephone"></i>
+                            <h3>Call Us</h3>
+                            <p>(+91) 9699675864</p>
+                            <p>(+91) 7276456203</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item" data-aos="fade" data-aos-delay="400">
+                            <i class="bi bi-envelope"></i>
+                            <h3>Email Us</h3>
+                            <a href="mailto:info@vastotech.in" title="Company Email"><p><span>info@vastotech.in</span></p></a>
+                            <p>We look forward to hearing from you and assisting with your technology needs!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item" data-aos="fade" data-aos-delay="500">
+                            <i class="bi bi-clock"></i>
+                            <h3>Open Hours</h3>
+                            <p>Monday - Friday</p>
+                            <p>9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Contact -->
 
     </main>
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-
         <div class="container footer-top">
             <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span>VASTOTECH SOLUTIONS</span>
+                <div class="col-lg-4 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center mb-3">
+                        <span>VASTOTECH</span>
                     </a>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3559637314324!2d73.94011617702965!3d18.512809524517582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c18c3afee01b%3A0xe142ce6b1d445077!2sLeisure%20Town!5e0!3m2!1sen!2sin!4v1713816480294!5m2!1sen!2sin" width="100%" height="80%" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
-                    <div class="social-links d-flex mt-4">
-                        <!-- <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a> -->
-                        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
+                    <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6;">We deliver intelligent software and IoT solutions that help businesses automate, secure and grow.</p>
+                    <div class="social-links d-flex mt-3">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Solutions</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <!-- <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li> -->
+                        <li><a href="#services">Video Analytics Software</a></li>
+                        <li><a href="#services">Advance BMS Software</a></li>
+                        <li><a href="#services">IoT Solutions</a></li>
+                        <li><a href="#services">All Solutions</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>Industries</h4>
                     <ul>
-                        <li><a href="#">Software Development Solutions</a></li>
-                        <li><a href="#">Cutting-Edge IT & IoT Solutions</a></li>
-                        <li><a href="#">Optimized Valves & Instrumentation</a></li>
-                        <li><a href="#">Reliable Security, Safety & Support Services</a></li>
-                        <li><a href="#">Comprehensive Infrastructure Support</a></li>
-                        <li><a href="#">ANNUAL MAINTENANCE CONTRACT</a></li>
+                        <li><a href="#portfolio">Commercial Buildings</a></li>
+                        <li><a href="#portfolio">Infrastructure</a></li>
+                        <li><a href="#portfolio">Manufacturing</a></li>
+                        <li><a href="#portfolio">Smart Cities</a></li>
+                        <li><a href="#portfolio">More Industries</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p><strong>Head Office:</strong> Leisure Town, Sadhunana Tupe Vasti, Malwadi, Hadapsar, Pune, Maharashtra, India.</p>
-                    <p><strong>Mumbai Branch Office:</strong> Pinnacolo, Mira Bhayandar Rd, Mumbai, Maharashtra 401107</p>
-
-                    <!-- <p>United States</p> -->
-                    <div class="mt-4">
-                        <strong>Phone:</strong>
-                        <span style="display: block;">(+91) 9699675864</span>
-                        <span style="display: block;">(+91) 7276456203</span>
-                    </div>
-					<a href="mailto:info@vastotech.in" title="company Email">
-                            <p><strong>Email:</strong> <span>info@vastotech.in </span></p>
-                        </a>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#portfolio">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
                 </div>
 
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>&copy; <span>Copyright</span> <strong class="px-1">VASTOTECH SOLUTIONS</strong> <span>All Rights Reserved</span></p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-md-start text-center">&copy; <span>Copyright</span> <strong class="px-1">Vastotech Solutions Private Limited</strong>. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal-links text-md-end text-center">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-
     </footer><!-- End Footer -->
+
     <!-- Scroll Top Button -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div><div></div>
     </div>
 
     <!-- Vendor JS Files -->
@@ -1051,16 +825,22 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js">
-	    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navMenu = document.querySelector('.navmenu ul');
-
-    navToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-    });
-	</script>
+    <!-- Template Main JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.navmenu ul');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('show');
+                });
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => navMenu.classList.remove('show'));
+                });
+            }
+        });
+    </script>
 
 </body>
-
 </html>
