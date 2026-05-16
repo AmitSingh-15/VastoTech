@@ -27,13 +27,13 @@ export const SITE = {
 };
 
 export const CONTACT: ContactDetails = {
-  phones: ['(+91) 9699675864', '(+91) 7276456203'],
+  phones: ['(+91) 9699675864', '(+91) 9930675809'],
   emails: ['info@vastotech.in'],
   offices: [
     {
       label: 'Head Office',
       address:
-        'Leisure Town, Sadhunana Tupe Vasti, Malwadi, Hadapsar, Pune, Maharashtra, India',
+        'Sr No 104/1 Sadanand Business Center,9th FLoor, Pashan Hwy Side Rd, Baner, Pune, Maharashtra 411045, India',
     },
     {
       label: 'Mumbai Branch',
@@ -45,10 +45,10 @@ export const CONTACT: ContactDetails = {
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '/' },
-  { label: 'Solutions', href: '/#solutions' },
-  { label: 'Industries', href: '/case-studies' },
+  { label: 'Solutions', href: '/#solutions', hasDropdown: true },
+  { label: 'Industries', href: '/case-studies', hasDropdown: true },
   { label: 'About Us', href: '/#about' },
-  { label: 'Resources', href: '/case-studies' },
+  { label: 'Resources', href: '/case-studies', hasDropdown: true },
   { label: 'Contact Us', href: '/#contact' },
 ];
 
@@ -113,7 +113,7 @@ export const SOLUTIONS: SolutionItem[] = [
       'Deploy on-prem, cloud or hybrid',
       'Integration with existing DVR/NVR systems',
     ],
-    image: '/images/projects/va1.jpg',
+    image: '/assets/solution-video.png',
   },
   {
     slug: 'advanced-bms-software',
@@ -131,7 +131,7 @@ export const SOLUTIONS: SolutionItem[] = [
       'Access control & visitor management',
       'Open-protocol integration (BACnet, Modbus)',
     ],
-    image: '/images/projects/bg1.jpg',
+    image: '/assets/solution-bms.png',
   },
   {
     slug: 'iot-solutions',
@@ -149,7 +149,7 @@ export const SOLUTIONS: SolutionItem[] = [
       'Custom dashboards and reports',
       'Secure provisioning and OTA updates',
     ],
-    image: '/images/projects/dc.jpg',
+    image: '/assets/solution-iot.png',
   },
 ];
 
@@ -169,7 +169,7 @@ export const CASE_STUDIES: CaseStudyItem[] = [
     industry: 'Construction & Infrastructure',
     description:
       'AI-based surveillance solution that improved site safety and reduced incidents by 40%.',
-    image: '/images/projects/va1.jpg',
+    image: '/assets/case-study-surveillance.png',
     challenge:
       'A large infrastructure client operated dozens of remote construction sites with limited safety oversight. Manual review of CCTV footage was reactive, slow, and missed near-miss events that could have prevented serious incidents.',
     solution:
@@ -189,7 +189,7 @@ export const CASE_STUDIES: CaseStudyItem[] = [
     industry: 'Commercial Real Estate',
     description:
       'Integrated BMS that reduced energy consumption by 25% and improved operational efficiency.',
-    image: '/images/projects/bg1.jpg',
+    image: '/assets/case-study-building.png',
     challenge:
       'A premium office tower struggled with rising energy costs and tenant comfort complaints. HVAC, lighting and access control ran on disconnected systems with no central visibility or automation.',
     solution:
@@ -209,7 +209,7 @@ export const CASE_STUDIES: CaseStudyItem[] = [
     industry: 'Manufacturing',
     description:
       'Real-time asset tracking and monitoring that improved visibility and reduced downtime.',
-    image: '/images/projects/dc.jpg',
+    image: '/assets/case-study-iot.png',
     challenge:
       'A manufacturing firm could not reliably track high-value tooling and mobile assets across its multi-acre plant. Lost equipment, missed maintenance windows, and unplanned downtime were eroding margins.',
     solution:
@@ -224,10 +224,10 @@ export const CASE_STUDIES: CaseStudyItem[] = [
 ];
 
 export const STATS: StatItem[] = [
-  { icon: Briefcase, value: 150, suffix: '+', label: 'Projects Delivered' },
-  { icon: Users, value: 100, suffix: '+', label: 'Happy Clients' },
-  { icon: Award, value: 10, suffix: '+', label: 'Years of Experience' },
-  { icon: Cpu, value: 50, suffix: '+', label: 'Experts' },
+  { icon: Briefcase, iconSrc: '/assets/stat-projects.png', value: 150, suffix: '+', label: 'Projects Delivered' },
+  { icon: Users, iconSrc: '/assets/stat-clients.png', value: 100, suffix: '+', label: 'Happy Clients' },
+  { icon: Award, iconSrc: '/assets/stat-experience.png', value: 10, suffix: '+', label: 'Years of Experience' },
+  { icon: Cpu, iconSrc: '/assets/stat-experts.png', value: 50, suffix: '+', label: 'Experts' },
 ];
 
 export const FOOTER_COLUMNS: FooterColumn[] = [

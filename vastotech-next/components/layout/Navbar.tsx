@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS } from '@/constants/data';
 import Button from '@/components/ui/Button';
@@ -53,12 +53,13 @@ export default function Navbar() {
 
         <ul className="hidden items-center gap-1 xl:flex">
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
+            <li key={link.label}>
               <Link
                 href={link.href}
-                className="rounded-md px-4 py-2 text-sm font-semibold uppercase tracking-wide text-navy-800 transition-colors hover:text-orange-400"
+                className="inline-flex items-center gap-1 rounded-md px-3.5 py-2 text-[13px] font-semibold uppercase tracking-wide text-navy-800 transition-colors hover:text-orange-400"
               >
                 {link.label}
+                {link.hasDropdown && <ChevronDown size={14} strokeWidth={2.25} />}
               </Link>
             </li>
           ))}

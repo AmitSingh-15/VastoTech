@@ -1,11 +1,20 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import Container from '@/components/ui/Container';
 import { STATS } from '@/constants/data';
 
-function Counter({ value, suffix, duration = 1.6 }: { value: number; suffix: string; duration?: number }) {
+function Counter({
+  value,
+  suffix,
+  duration = 1.6,
+}: {
+  value: number;
+  suffix: string;
+  duration?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
   const [count, setCount] = useState(0);
@@ -34,14 +43,15 @@ function Counter({ value, suffix, duration = 1.6 }: { value: number; suffix: str
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-navy-800 via-navy-700 to-navy-800 py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-navy-800 py-14 lg:py-16">
+      {/* Orange diagonal accent on right */}
       <div
         aria-hidden
-        className="absolute -right-20 top-0 h-full w-72 -skew-x-12 bg-orange-400/40"
+        className="absolute -right-24 top-0 h-full w-64 -skew-x-12 bg-orange-400"
       />
       <div
         aria-hidden
-        className="absolute right-32 top-0 h-full w-32 -skew-x-12 bg-orange-400/20"
+        className="absolute right-32 top-0 h-full w-20 -skew-x-12 bg-orange-400/40"
       />
 
       <Container className="relative">
@@ -55,17 +65,31 @@ export default function Stats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="text-center"
+                className="flex items-center gap-4"
               >
-                <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-orange-400 backdrop-blur">
-                  <Icon size={22} />
+                {stat.iconSrc ? (
+                  <div className="relative h-20 w-20 flex-shrink-0">
+                    <Image
+                      src={stat.iconSrc}
+                      alt={stat.label}
+                      fill
+                      sizes="80px"
+                      className="object-contain brightness-0 invert"
+                    />
+                  </div>
+                ) : (
+                  <span className="grid h-14 w-14 flex-shrink-0 place-items-center text-orange-400">
+                    <Icon size={42} strokeWidth={1.5} />
+                  </span>
+                )}
+                <div>
+                  <p className="font-display text-4xl font-extrabold leading-none text-white">
+                    <Counter value={stat.value} suffix={stat.suffix} />
+                  </p>
+                  <p className="mt-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white/85">
+                    {stat.label}
+                  </p>
                 </div>
-                <p className="font-display text-4xl font-extrabold text-white sm:text-5xl">
-                  <Counter value={stat.value} suffix={stat.suffix} />
-                </p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-slate-300">
-                  {stat.label}
-                </p>
               </motion.div>
             );
           })}

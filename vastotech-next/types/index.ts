@@ -3,6 +3,7 @@ import type { LucideIcon } from 'lucide-react';
 export interface NavLink {
   label: string;
   href: string;
+  hasDropdown?: boolean;
 }
 
 export interface FeatureItem {
@@ -36,6 +37,7 @@ export interface CaseStudyItem {
 
 export interface StatItem {
   icon: LucideIcon;
+  iconSrc?: string;
   value: number;
   suffix: string;
   label: string;

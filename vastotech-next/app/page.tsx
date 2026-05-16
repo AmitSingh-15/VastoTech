@@ -1,7 +1,6 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
-import Features from '@/components/sections/Features';
 import TrustedClients from '@/components/sections/TrustedClients';
 import Solutions from '@/components/sections/Solutions';
 import About from '@/components/sections/About';
@@ -16,7 +15,6 @@ export default function HomePage() {
       <Navbar />
       <main id="main">
         <Hero />
-        <Features />
         <TrustedClients />
         <Solutions />
         <About />

@@ -1,19 +1,31 @@
 import Link from 'next/link';
-import { Linkedin, Twitter, Facebook, Instagram, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Container from '@/components/ui/Container';
+import { WaveLines, DotGrid } from '@/components/ui/Decorations';
 import { FOOTER_COLUMNS, CONTACT, SITE } from '@/constants/data';
 
-const SOCIAL = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+const SOCIAL_LINKS = [
+  {
+    href: 'https://www.linkedin.com/company/vastotech',
+    label: 'LinkedIn',
+    external: true,
+  },
+  { href: '#', label: 'Facebook' },
+  { href: '#', label: 'YouTube' },
+  { href: `mailto:${CONTACT.emails[0]}`, label: 'Email' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-900 text-slate-300">
-      <Container className="py-16">
+    <footer className="relative overflow-hidden bg-navy-900 text-slate-300">
+      <WaveLines className="pointer-events-none absolute -top-6 right-0 hidden h-48 w-[480px] text-white/5 lg:block" />
+      <DotGrid
+        className="pointer-events-none absolute bottom-20 left-6 hidden h-24 w-32 text-white/10 lg:block"
+        rows={5}
+        cols={8}
+      />
+      <Container className="relative py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link
@@ -72,19 +84,31 @@ export default function Footer() {
               </p>
             </div>
 
-            <ul className="mt-6 flex gap-3">
-              {SOCIAL.map(({ icon: Icon, href, label }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    aria-label={label}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-colors hover:border-orange-400 hover:bg-orange-400 hover:text-white"
-                  >
-                    <Icon size={16} />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="relative mt-6 inline-block">
+              <Image
+                src="/assets/footer-social-icons.png"
+                alt=""
+                width={180}
+                height={44}
+                className="h-11 w-auto"
+              />
+              {/* Invisible click targets overlaid on each icon for accessibility */}
+              <ul className="absolute inset-0 flex items-center gap-3">
+                {SOCIAL_LINKS.map(({ href, label, external }) => (
+                  <li key={label} className="h-11 w-11">
+                    <a
+                      href={href}
+                      aria-label={label}
+                      target={external ? '_blank' : undefined}
+                      rel={external ? 'noopener noreferrer' : undefined}
+                      className="block h-full w-full rounded-full transition-transform duration-300 hover:scale-110"
+                    >
+                      <span className="sr-only">{label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {FOOTER_COLUMNS.map((col) => (
