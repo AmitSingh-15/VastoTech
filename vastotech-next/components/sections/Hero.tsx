@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { DotGrid } from '@/components/ui/Decorations';
-import { FEATURES } from '@/constants/data';
+import { FEATURES, SITE } from '@/constants/data';
 
 const PRODUCT_CARDS = [
   {
@@ -54,13 +54,64 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="lg:col-span-5"
           >
-            <h1 className="font-display text-3xl font-extrabold uppercase leading-[1.05] tracking-tight text-navy-800 text-balance sm:text-4xl lg:text-5xl">
-              Intelligent Solutions.
-              <br />
-              <span className="text-orange-400">Connected Future.</span>
-            </h1>
+            <motion.h1 
+              className="font-display text-4xl font-extrabold uppercase leading-[1.1] tracking-tight text-navy-900 text-balance sm:text-5xl lg:text-6xl xl:text-7xl"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+                className="block"
+              >
+                {SITE.taglineHero.line1}
+              </motion.span>
+              
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
+                className="relative block"
+              >
+                <span className="relative inline-block">
+                  <span className="absolute inset-0 -z-10 mx-2 h-full w-full transform bg-gradient-to-r from-orange-400 to-orange-600 blur-xl opacity-60" />
+                  <span className="relative bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                    {SITE.taglineHero.line2}
+                  </span>
+                </span>
+              </motion.span>
 
-            <div className="mt-5 h-1 w-14 bg-orange-400" />
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+                className="block"
+              >
+                {SITE.taglineHero.line3}
+              </motion.span>
+              
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.45 }}
+                className="relative block"
+              >
+                <span className="relative inline-block">
+                  {/* Animated gradient background with theme colors */}
+                  <span className="absolute inset-0 -z-10 mx-2 h-full w-full transform bg-gradient-to-r from-navy-600 via-orange-500 to-orange-400 blur-2xl opacity-50 animate-pulse" />
+                  {/* Gradient text using theme colors */}
+                  <span className="relative bg-gradient-to-r from-navy-700 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+                    {SITE.taglineHero.line4}
+                  </span>
+                </span>
+              </motion.span>
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
+              className="mt-6 h-1.5 w-24 origin-left rounded-full bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 shadow-lg shadow-orange-400/50"
+            />
 
             <p className="mt-5 max-w-md text-base leading-relaxed text-slate-600">
               Empowering businesses with intelligent software and IoT solutions for a smarter,
