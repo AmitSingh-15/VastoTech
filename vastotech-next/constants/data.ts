@@ -33,7 +33,7 @@ export const CONTACT: ContactDetails = {
     {
       label: 'Head Office',
       address:
-        'Sr No 104/1 Sadanand Business Center,9th FLoor, Pashan Hwy Side Rd, Baner, Pune, Maharashtra 411045, India',
+        'The Atrium, Office No. B -105a, 1 Floor,  Shirke Road, Mundhwa, Pune, Maharashtra 411036, India',
     },
     {
       label: 'Mumbai Branch',

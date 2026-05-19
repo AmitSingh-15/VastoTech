@@ -10,7 +10,8 @@ const ITEMS = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    lines: CONTACT.offices.map((o) => `${o.label}: ${o.address}`),
+    lines: CONTACT.offices.map((o) => o.address),
+    labels: CONTACT.offices.map((o) => o.label),
   },
   {
     icon: Phone,
@@ -51,6 +52,7 @@ export default function Contact() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((item, idx) => {
             const Icon = item.icon;
+
             return (
               <motion.div
                 key={item.title}
@@ -63,12 +65,16 @@ export default function Contact() {
                 <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-orange-100 text-orange-500">
                   <Icon size={22} />
                 </div>
+
                 <h3 className="text-sm font-bold uppercase tracking-wide text-navy-800">
                   {item.title}
                 </h3>
+
                 <div className="mt-3 space-y-1.5">
                   {item.lines.map((line, i) => {
                     const href = item.hrefs?.[i];
+                    const label = item.labels?.[i];
+
                     return href ? (
                       <a
                         key={i}
@@ -77,6 +83,13 @@ export default function Contact() {
                       >
                         {line}
                       </a>
+                    ) : label ? (
+                      <p key={i} className="text-sm text-slate-600">
+                        <span className="font-semibold text-navy-900">
+                          {label}:
+                        </span>{' '}
+                        {line}
+                      </p>
                     ) : (
                       <p key={i} className="text-sm leading-relaxed text-slate-600">
                         {line}
