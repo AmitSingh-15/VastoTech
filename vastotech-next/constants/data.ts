@@ -21,7 +21,7 @@ import type {
 
 export const SITE = {
   name: 'Vastotech',
-  legalName: 'Vastotech Solutions Private Limited',
+  legalName: 'Vastotech Solutions LLP',
   domain: 'vastotech.in',
   tagline: 'Intelligent Solutions. Connected Future.',
 };
