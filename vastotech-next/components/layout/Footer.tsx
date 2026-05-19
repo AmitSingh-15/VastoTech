@@ -1,20 +1,59 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Linkedin, Facebook, Youtube } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import { WaveLines, DotGrid } from '@/components/ui/Decorations';
 import { FOOTER_COLUMNS, CONTACT, SITE } from '@/constants/data';
 
-const SOCIAL_LINKS = [
+interface SocialLink {
+  href: string;
+  label: string;
+  external: boolean;
+  icon: React.ElementType;
+}
+
+const SOCIAL_LINKS: SocialLink[] = [
   {
     href: 'https://www.linkedin.com/company/vastotech',
     label: 'LinkedIn',
     external: true,
+    icon: Linkedin,
   },
-  { href: '#', label: 'Facebook' },
-  { href: '#', label: 'YouTube' },
-  { href: `mailto:${CONTACT.emails[0]}`, label: 'Email' },
+  { 
+    href: '#', 
+    label: 'Facebook',
+    external: false,
+    icon: Facebook,
+  },
+  { 
+    href: '#', 
+    label: 'YouTube',
+    external: false,
+    icon: Youtube,
+  },
+  { 
+    href: `mailto:${CONTACT.emails[0]}`, 
+    label: 'Email',
+    external: false,
+    icon: Mail,
+  },
 ];
+
+const getSocialIconClasses = (label: string) => {
+  const baseClasses = "inline-flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 transform hover:scale-125 shadow-lg";
+  
+  switch (label) {
+    case 'LinkedIn':
+      return `${baseClasses} bg-gradient-to-br from-blue-600 to-blue-700 text-white hover:shadow-blue-500/50 hover:shadow-2xl`;
+    case 'Facebook':
+      return `${baseClasses} bg-gradient-to-br from-blue-500 to-blue-600 text-white hover:shadow-blue-400/50 hover:shadow-2xl`;
+    case 'YouTube':
+      return `${baseClasses} bg-gradient-to-br from-red-600 to-red-700 text-white hover:shadow-red-500/50 hover:shadow-2xl`;
+    case 'Email':
+      return `${baseClasses} bg-gradient-to-br from-orange-500 to-orange-600 text-white hover:shadow-orange-400/50 hover:shadow-2xl`;
+    default:
+      return `${baseClasses} bg-gradient-to-br from-slate-600 to-slate-700 text-white`;
+  }
+};
 
 export default function Footer() {
   return (
@@ -84,31 +123,22 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="relative mt-6 inline-block">
-              <Image
-                src="/assets/footer-social-icons.png"
-                alt=""
-                width={180}
-                height={44}
-                className="h-11 w-auto"
-              />
-              {/* Invisible click targets overlaid on each icon for accessibility */}
-              <ul className="absolute inset-0 flex items-center gap-3">
-                {SOCIAL_LINKS.map(({ href, label, external }) => (
-                  <li key={label} className="h-11 w-11">
-                    <a
-                      href={href}
-                      aria-label={label}
-                      target={external ? '_blank' : undefined}
-                      rel={external ? 'noopener noreferrer' : undefined}
-                      className="block h-full w-full rounded-full transition-transform duration-300 hover:scale-110"
-                    >
-                      <span className="sr-only">{label}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="mt-8 flex items-center gap-5">
+              {SOCIAL_LINKS.map(({ href, label, external, icon: Icon }) => (
+                <li key={label} className="group">
+                  <a
+                    href={href}
+                    aria-label={label}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                    className={getSocialIconClasses(label)}
+                  >
+                    <Icon size={24} className="group-hover:animate-bounce" />
+                    <span className="sr-only">{label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {FOOTER_COLUMNS.map((col) => (
