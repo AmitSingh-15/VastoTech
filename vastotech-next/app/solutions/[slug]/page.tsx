@@ -12,15 +12,16 @@ import CTA from '@/components/sections/CTA';
 import { SOLUTIONS } from '@/constants/data';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return SOLUTIONS.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const solution = SOLUTIONS.find((s) => s.slug === params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const solution = SOLUTIONS.find((s) => s.slug === slug);
   if (!solution) return { title: 'Solution not found' };
   return {
     title: solution.title,
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function SolutionDetailPage({ params }: PageProps) {
-  const solution = SOLUTIONS.find((s) => s.slug === params.slug);
+export default async function SolutionDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const solution = SOLUTIONS.find((s) => s.slug === slug);
   if (!solution) notFound();
 
   const related = SOLUTIONS.filter((s) => s.slug !== solution.slug);

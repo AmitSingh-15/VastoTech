@@ -12,15 +12,16 @@ import CTA from '@/components/sections/CTA';
 import { CASE_STUDIES } from '@/constants/data';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const cs = CASE_STUDIES.find((c) => c.slug === params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const cs = CASE_STUDIES.find((c) => c.slug === slug);
   if (!cs) return { title: 'Case study not found' };
   return {
     title: cs.title,
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function CaseStudyDetailPage({ params }: PageProps) {
-  const cs = CASE_STUDIES.find((c) => c.slug === params.slug);
+export default async function CaseStudyDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const cs = CASE_STUDIES.find((c) => c.slug === slug);
   if (!cs) notFound();
 
   const related = CASE_STUDIES.filter((c) => c.slug !== cs.slug);
