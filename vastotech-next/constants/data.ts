@@ -17,9 +17,10 @@ import type {
   ClientLogo,
   FooterColumn,
   ContactDetails,
+  SiteConfig,
 } from '@/types';
 
-export const SITE = {
+export const SITE: SiteConfig = {
   name: 'Vastotech',
   legalName: 'Vastotech Solutions LLP',
   domain: 'vastotech.in',

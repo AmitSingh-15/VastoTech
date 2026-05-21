@@ -59,3 +59,20 @@ export interface ContactDetails {
   offices: { label: string; address: string }[];
   hours: string;
 }
+
+export interface SiteConfig {
+  name: string;
+  legalName: string;
+  domain: string;
+  tagline: string;
+  taglineLines: {
+    primary: string;
+    secondary: string;
+  };
+  taglineHero: {
+    line1: string;
+    line2: string;
+    line3: string;
+    line4: string;
+  };
+}
